@@ -24,6 +24,20 @@
           <% end %>
         </tr>
       </table>
+
+      <h3>コメント</h3>
+		<table class="table" id="comment_list">
+			<%= render 'book_comments/comments', book_comments: @book_comments %>
+		</table>
+
+		<div class="row">
+			<%= form_with(model:[@book,@book_comments], local: true) do |f| %>
+				<%= f.text_area :content, class: "col-xs-10",id: "book_comment_content" %>
+				<%= f.submit '送信' %>
+			<% end %>
+		</div>
+
+
     </div>
   </div>
 </div>
