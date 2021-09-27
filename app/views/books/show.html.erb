@@ -31,8 +31,8 @@
 		</table>
 
 		<div class="row">
-			<%= form_with(model:[@book,@book_comments], local: true) do |f| %>
-				<%= f.text_area :content, class: "col-xs-10",id: "book_comment_content" %>
+			<%= form_with(model:[@book,@book_comment], local: true) do |f| %>
+				<%= f.text_area :book_comments, class: "col-xs-10",id: "book_comment_content" %>
 				<%= f.submit '送信' %>
 			<% end %>
 		</div>
